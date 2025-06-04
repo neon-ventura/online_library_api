@@ -1,9 +1,11 @@
-from rest_framework.views import APIView
+from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
+from .models import User
+from .serializers import UserSerializer
 
 
-class UserView(APIView):
-    
-    def get(self, req):
-        return Response({"Message": "Here are the all users"}, status.HTTP_200_OK)
+class UserViewSet(viewsets.ModelViewSet):
+        queryset = User.objects.all()
+        serializer_class = UserSerializer
+        
