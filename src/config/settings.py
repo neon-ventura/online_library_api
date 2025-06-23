@@ -46,17 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.books',
     'apps.users',
-    'apps.auth_app',
     'rest_framework_simplejwt',
 ]
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-}
-
-AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,8 +88,8 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': SECRET_KEY_DB,
-        'HOST': 'centerbeam.proxy.rlwy.net',
-        'PORT': 32650
+        'HOST': 'shinkansen.proxy.rlwy.net',
+        'PORT': 47781
     }
 }
 
