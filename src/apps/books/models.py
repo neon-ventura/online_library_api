@@ -6,7 +6,7 @@ class Book(models.Model):
     author = models.CharField(max_length=255)
     link = models.URLField()
     created_at = models.DateField(auto_now_add=True)
-    # user_id = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     
 
     def __str__(self):
