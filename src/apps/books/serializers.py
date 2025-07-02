@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Book
+from apps.books.models import BooksModel
 
-class BookSerializer(serializers.ModelSerializer):
+class BooksSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Book
-        fields = ['id', 'name', 'author', 'link', 'created_at', 'user_id']
+        model = BooksModel
+        fields = ['id', 'name', 'author', 'link', 'publication_date']
